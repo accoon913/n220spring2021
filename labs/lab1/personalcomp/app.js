@@ -2,17 +2,20 @@ function setup() {
     createCanvas(600, 650);
     background(255, 240, 207);
     strokeWeight(4);
+    var blue = color(43, 93, 255);
+    var white = color(250,250,252);
+    
 
     // Body
-    fill(250, 250, 252); //white
+    fill(white); //white
     rect(220,200,200,210);
     quad(240,410,400,410,360,440,280,440);
-    fill(43, 93, 255); //blue
+    fill(blue); //blue
     rect(270,210,100,8);
     quad(265,225,375,230,375,235,265,240);
     quad(265,255,375,260,375,245,265,250);
     rect(300,280,40,70);
-    fill(250, 250, 252); //white
+    fill(white); //white
     stroke(255,255,255);
     ellipse(320,300,20,25);
     ellipse(320,330,20,25);
@@ -56,7 +59,7 @@ function setup() {
     arc(320,198,200,200,radians(180),radians(0));
     ellipse(355,168,20,20);
     ellipse(355,168,10,10);
-    fill(43, 93, 255); //blue
+    fill(blue); //blue
     quad(300,125,340,125,340,160,290,160);
     rect(220,188,200,6);
     rect(305,165,30,17);
@@ -80,7 +83,7 @@ function setup() {
     
 
     // Legs
-    fill(250, 250, 252); // white
+    fill(white); // white
     strokeJoin(ROUND);
     rect(190,200,30,260); // left leg
     quad(190,460,220,460,230,500,180,500);
@@ -90,7 +93,7 @@ function setup() {
     quad(420,460,450,460,460,500,410,500);
     rect(400,435,20,40);
     triangle(450,320,460,340,450,340);
-    fill(43, 93, 255); //blue & start of leg details
+    fill(blue); //blue & start of leg details
     rect(190,340,10,80);
     rect(440,340,10,80);
     stroke(204, 149, 94);

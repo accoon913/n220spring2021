@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-    background(200);
+    background(214, 206, 184);
     var y = 200;
     
     for (i = 0; i < 25; ++ i) { // Loop repeats 25 times

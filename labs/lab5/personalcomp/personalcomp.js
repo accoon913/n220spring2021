@@ -31,10 +31,9 @@ function sun (yPos) {
 function night () {
     background("#0f143b"); // Dark blue color
 
-    // This loop creates my stars in the night sky
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < 10; i++) { // Used to create my stars across the screen horizontally
     var x = 20 + i * 50 ;
-        for (var j = 0; j < 7; j++) {
+        for (var j = 0; j < 7; j++) { // Create stars across the screen vertically
             var y = 20 + 50 * j;
             fill ("#e8cb6b");
              circle(x, y, 5);

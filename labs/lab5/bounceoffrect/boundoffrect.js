@@ -27,14 +27,14 @@ function circlebounce () {
     fill ("#f4d160");
     circle(circX, circY, 25);
 
-    circX += speedX; // Vertical speed of the ball
-    circY += speedY; // Horizontal speed of the ball
+    circX += speedX; // Horizontal speed of the ball
+    circY += speedY; // Vertical speed of the ball
 
-    // When the ball approaches the edges of the screen vertically
+    // When the ball approaches the edges of the screen horizontally
     if (circX < 25 || circX > 475) {
         speedX *= -1; // Reverses the x direction of the ball
     }
-    // When the ball approaches the edges of the screen horizontally
+    // When the ball approaches the edges of the screen vertically
     if (circY < 25 || circY > 475) {
         speedY *= -1; // Reverse the y direction of the ball
     }

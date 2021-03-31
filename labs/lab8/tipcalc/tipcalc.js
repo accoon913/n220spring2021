@@ -1,4 +1,4 @@
-let txtAmount = document.getElementById("txtAmount")
+let txtAmount = document.getElementById("txtAmount");
 
 function calcTip() {
     let initialAmount = Number(txtAmount.value);

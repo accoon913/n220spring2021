@@ -19,6 +19,9 @@ function doCalcs() {
     dvSumResults.innerHTML = sum;
     dvAvgResults.innerHTML = avg;
     
-    console.log(sum);
-    console.log(avg);
+    //console.log(sum);
+    //console.log(avg);
+
+    // Resets input field
+    txtNumbers.value = "";
 }

@@ -10,6 +10,22 @@ let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var chosenWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 console.log(chosenWord);
 
+// array for replacing letters with _
+var guessLetter = [];
+
+// loop that goes replaces the chosenWord letters with _
+for (var i = 0; i < chosenWord.length; i++) {
+    let word = document.getElementById("word");
+    guessLetter[i] = "_";
+
+    // joins the array to remove commas
+    word.innerHTML = guessLetter.join(" ");
+    console.log(guessLetter);
+}
+
+// variable for the letters that remain to be guessed
+var remainingLetters = chosenWord.length;
+
 // function to create the canvas for the hangman drawing
 function setup() {
     createCanvas(500, 500);

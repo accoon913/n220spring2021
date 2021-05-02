@@ -13,7 +13,7 @@ console.log(chosenWord);
 // array for replacing letters with _
 var guessLetter = [];
 
-// loop that goes replaces the chosenWord letters with _
+// loop that replaces the chosenWord letters with _
 for (var i = 0; i < chosenWord.length; i++) {
     let word = document.getElementById("word");
     guessLetter[i] = "_";
@@ -53,6 +53,20 @@ for(var i = 0; i < alphabet.length; i++) {
     buttons.addEventListener("click", checkMatch);
 
     function checkMatch() {
+        // variable to store the letter values of pressed buttons
+        var guess = buttons.innerHTML;
+        console.log(guess);
+
+       for(var i = 0; i < chosenWord.length; i++) {
+        // if any of the letters in chosenWord match the guessed letter
+        if(chosenWord[i] === guess) {
+                guessLetter[i] = guess;
+                //subtract guessed letters from remaining letters
+                remainingLetters--;
+                console.log(remainingLetters)
+            }
+        }
+
         event.target.style.backgroundColor = "#c9c9c9";
     }
 }

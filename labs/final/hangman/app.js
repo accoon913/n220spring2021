@@ -6,6 +6,9 @@ let guessWords = ["sloth", "indubitably", "ampersand", "controller", "candle",
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
+// lives variable to determine how many guesses until game over
+var lives = 8;
+
 // choses a random word from the guessWords array
 var chosenWord = guessWords[Math.floor(Math.random() * guessWords.length)];
 console.log(chosenWord);
@@ -56,18 +59,42 @@ for(var i = 0; i < alphabet.length; i++) {
         // variable to store the letter values of pressed buttons
         var guess = buttons.innerHTML;
         console.log(guess);
-
+    
        for(var i = 0; i < chosenWord.length; i++) {
         // if any of the letters in chosenWord match the guessed letter
         if(chosenWord[i] === guess) {
-                guessLetter[i] = guess;
+                guessLetter[i].innerHTML = guess;
                 //subtract guessed letters from remaining letters
                 remainingLetters--;
                 console.log(remainingLetters)
             }
         }
-
         event.target.style.backgroundColor = "#c9c9c9";
     }
+}
+
+// draws hangman parts as lives go down
+function draw () {
+    
+    fill(0, 0, 0);
+    stroke(0, 0, 0);
+    // platform
+    rect(100, 400, 300, 100);
+    // noose
+    line (100, 400, 100, 200)
+    line (100, 200, 250, 200)
+    line (250, 200, 250, 225)
+    // head
+    circle (250, 235, 15);
+    // body
+    line (250, 250, 250, 300)
+    // right arm
+    line (265, 260, 250, 275)
+    // left arm
+    line (235, 260, 250, 275)
+    // right leg
+    line (250, 300, 270, 325)
+    //left leg
+    line (250, 300, 230, 325)
 }
 

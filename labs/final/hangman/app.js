@@ -60,12 +60,14 @@ for(var i = 0; i < alphabet.length; i++) {
         var guess = buttons.innerHTML;
         console.log(guess);
     
-       for(var i = 0; i < chosenWord.length; i++) {
-        // if any of the letters in chosenWord match the guessed letter
-        if(chosenWord[i] === guess) {
+        for(var i = 0; i < chosenWord.length; i++) {
+            // if any of the letters in chosenWord match the guessed letter
+            if(chosenWord[i] === guess) {
+
                 guessLetter[i].innerHTML = guess;
                 //subtract guessed letters from remaining letters
                 remainingLetters--;
+
                 console.log(remainingLetters)
             }
         }
